@@ -236,19 +236,43 @@ const X264_AVCINTRA_FLAVOR_PANASONIC = 0
 const X264_AVCINTRA_FLAVOR_SONY = 1
 
 // static const char * const x264_direct_pred_names[] = { "none", "spatial", "temporal", "auto", 0 };
+var X264DirectPredNames = []string{"none", "spatial", "temporal", "auto"}
+
 // static const char * const x264_motion_est_names[] = { "dia", "hex", "umh", "esa", "tesa", 0 };
+var X264MotionEstNames = []string{"dia", "hex", "umh", "esa", "tesa"}
+
 // static const char * const x264_b_pyramid_names[] = { "none", "strict", "normal", 0 };
+var X264BPyramidNames = []string{"none", "strict", "normal"}
+
 // static const char * const x264_overscan_names[] = { "undef", "show", "crop", 0 };
+var X264OverscanNames = []string{"undef", "show", "crop"}
+
 // static const char * const x264_vidformat_names[] = { "component", "pal", "ntsc", "secam", "mac", "undef", 0 };
+var X264VidformatNames = []string{"component", "pal", "ntsc", "secam", "mac", "undef"}
+
 // static const char * const x264_fullrange_names[] = { "off", "on", 0 };
+var X264FullrangeNames = []string{"off", "on"}
+
 // static const char * const x264_colorprim_names[] = { "", "bt709", "undef", "", "bt470m", "bt470bg", "smpte170m", "smpte240m", "film", "bt2020", "smpte428",
-//                                                      "smpte431", "smpte432", 0 };
+//
+//	"smpte431", "smpte432", 0 };
+var X264ColorprimNames = []string{"", "bt709", "undef", "", "bt470m", "bt470bg", "smpte170m", "smpte240m", "film", "bt2020", "smpte428", "smpte431", "smpte432"}
+
 // static const char * const x264_transfer_names[] = { "", "bt709", "undef", "", "bt470m", "bt470bg", "smpte170m", "smpte240m", "linear", "log100", "log316",
-//                                                     "iec61966-2-4", "bt1361e", "iec61966-2-1", "bt2020-10", "bt2020-12", "smpte2084", "smpte428", "arib-std-b67", 0 };
+//
+//	"iec61966-2-4", "bt1361e", "iec61966-2-1", "bt2020-10", "bt2020-12", "smpte2084", "smpte428", "arib-std-b67", 0 };
+var X264TransferNames = []string{"", "bt709", "undef", "", "bt470m", "bt470bg", "smpte170m", "smpte240m", "linear", "log100", "log316", "iec61966-2-4", "bt1361e", "iec61966-2-1", "bt2020-10", "bt2020-12", "smpte2084", "smpte428", "arib-std-b67"}
+
 // static const char * const x264_colmatrix_names[] = { "GBR", "bt709", "undef", "", "fcc", "bt470bg", "smpte170m", "smpte240m", "YCgCo", "bt2020nc", "bt2020c",
-//                                                      "smpte2085", "chroma-derived-nc", "chroma-derived-c", "ICtCp", 0 };
+//
+//	"smpte2085", "chroma-derived-nc", "chroma-derived-c", "ICtCp", 0 };
+var X264ColmatrixNames = []string{"GBR", "bt709", "undef", "", "fcc", "bt470bg", "smpte170m", "smpte240m", "YCgCo", "bt2020nc", "bt2020c", "smpte2085", "chroma-derived-nc", "chroma-derived-c", "ICtCp"}
+
 // static const char * const x264_nal_hrd_names[] = { "none", "vbr", "cbr", 0 };
+var X264NalHrdNames = []string{"none", "vbr", "cbr"}
+
 // static const char * const x264_avcintra_flavor_names[] = { "panasonic", "sony", 0 };
+var X264AvcintraFlavorNames = []string{"panasonic", "sony"}
 
 /* Colorspace type */
 const X264_CSP_MASK = 0x00ff       /* */
@@ -725,6 +749,7 @@ func (param *X264ParamT) X264ParamCleanup() {
  *
  *      Currently available presets are, ordered from fastest to slowest: */
 // static const char * const x264_preset_names[] = { "ultrafast", "superfast", "veryfast", "faster", "fast", "medium", "slow", "slower", "veryslow", "placebo", 0 };
+var X264PresetNames = []string{"ultrafast", "superfast", "veryfast", "faster", "fast", "medium", "slow", "slower", "veryslow", "placebo"}
 
 /*      The presets can also be indexed numerically, as in:
  *      x264_param_default_preset( &param, "3", ... )
@@ -737,6 +762,7 @@ func (param *X264ParamT) X264ParamCleanup() {
  *
  *      Currently available tunings are: */
 // static const char * const x264_tune_names[] = { "film", "animation", "grain", "stillimage", "psnr", "ssim", "fastdecode", "zerolatency", 0 };
+var X264TuneNames = []string{"film", "animation", "grain", "stillimage", "psnr", "ssim", "fastdecode", "zerolatency"}
 
 /*      Multiple tunings can be used if separated by a delimiter in ",./-+",
  *      however multiple psy tunings cannot be used.
