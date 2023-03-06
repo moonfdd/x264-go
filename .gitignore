@@ -57,4 +57,4 @@ releases/
 .idea/
 out/
 
-resources/
+# resources/

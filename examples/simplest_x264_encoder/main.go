@@ -18,8 +18,8 @@ func main0() ffcommon.FInt {
 	var i, j ffcommon.FInt
 
 	//FILE* fp_src  = fopen("../cuc_ieschool_640x360_yuv444p.yuv", "rb");
-	fp_src, _ := os.Open("./resources/640x360_yuv420p.yuv")
-	fp_dst_file := "./out/640x360_yuv420p.h264"
+	fp_src, _ := os.Open("./resources/cuc_ieschool_640x360_yuv420p.yuv")
+	fp_dst_file := "./out/cuc_ieschool_640x360_yuv420p.h264"
 	fp_dst, _ := os.Create(fp_dst_file)
 
 	//Encode 50 frame
