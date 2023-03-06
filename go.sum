@@ -1,0 +1,4 @@
+github.com/moonfdd/ffmpeg-go v0.0.0-20230306023015-7de6b82b1252 h1:4EIVV5TVxAFYEeVTDfhMzn8KZnX9k2XBXNIwI3zfB3g=
+github.com/moonfdd/ffmpeg-go v0.0.0-20230306023015-7de6b82b1252/go.mod h1:Ep1iwcwuwKO++JEsV/mLGEv8UQCdOme1MVCiogMBKFg=
+github.com/ying32/dylib v0.0.0-20220227124818-fdf9ea9fbc96 h1:+kU/yXSAQPL4G7OQOxz/j62GdM+G5yd5J1/NNm7u3QI=
+github.com/ying32/dylib v0.0.0-20220227124818-fdf9ea9fbc96/go.mod h1:WPBTfbqg/aA1xqHFPB4fgBHETq/G/75yErbnexmaEOo=
